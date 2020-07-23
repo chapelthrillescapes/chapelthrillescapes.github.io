@@ -1,0 +1,39 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    font-family: 'Special Elite', cursive;
+}
+
+.puzzleNum {
+    display: flex;
+    flex-direction: column;
+    justify-items: left;
+    align-content: left;
+    align-items: left;
+    font-family: 'Cambria', 20px;
+}
+
+.riddle {
+    display: flex;
+    flex-direction: column;
+    justify-items: right;
+    align-items: left;
+    font-family: 'Cambria', cursive;
+    font-size: 20px;
+    margin: 1px 100px 10px;
+}
+
+.bigger {
+    font-size: 110%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    /*justify-content: space-evenly;
+    /*width: 300px;*/
+    align-content: space-between;
+}
