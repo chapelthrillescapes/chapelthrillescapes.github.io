@@ -2,28 +2,134 @@
 <html lang="en">
     <head>
         <style>
-            .pictures {
+            h4 {font-weight: normal;}
+            
+            .button {
+                /*border: 0.5px solid #000000;*/
+                border: none;
+                padding: 30px 30px;
+                text-align: center;
+                text-decoration: none;
                 display: inline-block;
+                font-size: 16px;
+                /*box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);*/
+                box-shadow: 0 9px #999;
+                box-shadow:inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.20);
             }
+
+            .button:active {
+                /*box-shadow: 0 5px #666;*/
+                transform: translateY(3px);
+                /*transform: translate(5px  10px);*/
+            }
+
+            .buttonRiddle {
+                display: flex;
+                flex-direction: column;
+                justify-items: right;
+                align-items: left;
+                font-family: 'Cambria', cursive;
+                font-size: 20px;
+                margin: 1px 100px 1px; /*top left botton*/
+            }
+
+            .button1 {background-color:red; border-radius: 100%;}
+            .button2 {background-color:rebeccapurple; border-radius: 100%;}
+            .button3 {background-color:yellow; border-radius: 100%;}
+            .button4 {background-color:green; border-radius: 100%;}
+            .button5 {background-color:red; border-radius: 100%;}
+            .button6 {background-color:red; border-radius: 100%;}
+            .button7 {background-color:rebeccapurple; border-radius: 100%;}
+            .button8 {background-color:yellow; border-radius: 100%;}
+            .button9 {background-color:orange; border-radius: 100%;}
         </style>
-        
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Level 3</title>
+
+        <!--Hint-->
+        <title>Find the sequence</title>
         <link rel="stylesheet" href="./css/general.css">
         
         <body>
-            <div class = "puzzleNum">
-                <h4 style="font-weight: normal">3.</h4>
+            <div class="puzzleNum">
+                <h4>7.</h4>
             </div>
 
             <!--Riddle-->
-            <div class="pictures">
-                <img src="./images/do.PNG" height=300px class="images" style="margin-left:115px">
-                <img src="./images/rr.PNG" height=300px class="images">
-                <img src="./images/il.PNG" height=300px class="images">
-                <img src="./images/ft.PNG" height=300px class="images">
-                <img src="./images/tb.PNG" height=300px class="images">
+            <div class="buttonRiddle">
+                <h4 style="font-size:medium"> 1) To know where to start, you must think to a map
+                <br>Where these countries are clumped together, even some of them overlap.
+                <br>Much of it is desert, so it really gets quite hot
+                <br>camels, dates, and history, it’s quite a melting pot.
+                <br>
+                <br>2) Next, take a left turn two steps at a time, 
+                <br>then turn towards polaris, and for one spot, climb 
+                <br>
+                <br>3) Next, thank Peter Pan, for its his directions we follow
+                <br>when it comes to Neverland, his star directional motto
+                <br>
+                <br>4) Now it’s time for us to finish, the time went by in a blur!
+                <br>Your final spot is down the block, and all alone in its color!
+                </h4>
+            </div>
+
+            <!--Buttons-->
+            <!--Correct sequence: 
+                button 6 (middle right red), 
+                1 (top left red), 
+                3 (top right yellow), 
+                9 (bottom right orange)-->
+            <div class="buttons">
+                <button class="button button1" onclick="second()"></button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button class="button button2" onclick="wrongButton()"></button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button class="button button3" onclick="third()"></button>
+            </div>
+            <h4></h4>
+            <div class="buttons">
+                <button class="button button4" onclick="wrongButton()"></button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button class="button button5" onclick="wrongButton()"></button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button class="button button6" onclick="first()"></button>
+            </div>
+            <h4></h4>
+            <div class="buttons">
+                <button class="button button7" onclick="wrongButton()"></button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button class="button button8" onclick="wrongButton()"></button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button class="button button9" onclick="fourth()"></button>
+            </div>
+
+            <p id="wrong"></p>
+
+            <script>
+                var counter;
+                function wrongButton() {
+                    counter=0;
+                    document.getElementById("wrong").innerHTML = "Wrong Button, try again";
+                }
+
+                function first() {
+                    counter = 1;
+                }
+                
+                function second() {
+                    if (counter == 1) {
+                        counter = 2;
+                    } else {
+                        wrongButton();
+                    }
+                }
+                function third() {
+                    if (counter == 2) {
+                        counter = 3;
+                    } else {
+                        wrongButton();
+                    }
+                }
+                function fourth() {
+                    if (counter == 3) {
+                        window.location.href="googlemaps.html" //links to next puzzle
+                    } else {
+                        wrongButton();
+                    }
+                }
+            </script>
         </body>
     </head>
 </html>
