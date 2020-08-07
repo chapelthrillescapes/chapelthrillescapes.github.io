@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            body {
+                background-image: url('./images/chessboard-blank.png');
+                background-size: auto;
+                background-repeat: no-repeat;
+                position: relative;
+                background-position:top;
+            }
+            
+            .button {
+                border: none;
+                padding: 25px 25px;
+                display: inline-block;
+                position: relative;
+            }
+
+            .button1 {
+                background-color:#72440b;
+                border: 1px solid #ffffff; 
+                border-radius: 100%;
+                top: 231px;
+                left: 509px;
+                /*transform: translate(-50%,-50%);*/
+            }
+
+            .button2 {
+                background-color:#72440b;
+                border: 1px solid #ffffff; 
+                border-radius: 100%;
+                top: 230px;
+                left: 545px;
+            }
+
+            .button3 {
+                background-color:#72440b; 
+                border: 1px solid #ffffff;
+                border-radius: 100%;
+                top: 230px;
+                left: 580px;
+            }
+            
+            .button4 {
+                background-color:#72440b; 
+                border: 1px solid #ffffff;
+                border-radius: 100%;
+                top: 245px;
+                left: 510px;
+            }
+            
+            .button5 {
+                background-color:#72440b;
+                border: 1px solid #ffffff; 
+                border-radius: 100%;
+                top: 245px;
+                left: 545px;
+            }
+
+            .button6 {
+                background-color:#72440b; 
+                border: 1px solid #ffffff;
+                border-radius: 100%;
+                top: 245px;
+                left: 580px;
+            }
+            
+            .button7 {
+                background-color: #72440b; 
+                border: 1px solid #ffffff;
+                border-radius: 100%;
+                top: 252px;
+                left: 510px;
+            }
+
+            .button8 {
+                background-color:#72440b;
+                border: 1px solid #ffffff;
+                border-radius: 100%;
+                top: 252px;
+                left: 545px;
+            }
+            
+            .button9 {
+                background-color:#72440b; 
+                border: 1px solid #ffffff;
+                border-radius: 100%;
+                top: 252px;
+                left: 580px;
+            }
+
+        </style>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/general.css">
+        
+        <body>
+
+            <!--<div class="overlay">
+                <img src="./images/chessboard.png" width=50%/>
+            </div>-->
+
+            <div class="buttons">
+                <button class="button button1" onclick="correct()"></button>
+                <button class="button button2" onclick="wrong()"></button>
+                <button class="button button3" onclick="wrong()"></button>
+            </div>
+            <h4></h4>
+            <div class="buttons ">
+                <button class="button button4" onclick="wrong()"></button>
+                <button class="button button5" onclick="correct()"></button>
+                <button class="button button6" onclick="correct()"></button>
+            </div>
+            <h4></h4>
+            <div class="buttons">
+                <button class="button button7" onclick="correct()"></button>
+                <button class="button button8" onclick="wrong()"></button>
+                <button class="button button9" onclick="wrong()"></button>
+            </div>
+
+            <script>
+                var counter = 0;
+                function wrong() {
+                    counter=0;
+                }
+
+                function correct() {
+                    counter += 1;
+                    if (counter == 4) {
+                        window.location.href="https://bit.ly/31wNoq0"    
+                    }
+                }
+            </script>
+        </body>
+    </head>
+</html>
