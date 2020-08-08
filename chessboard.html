@@ -9,85 +9,72 @@
                 position: relative;
                 background-position:top;
             }
+
+            .grid-container {
+                display: grid;
+                grid-template-columns: 100px 100px 100px;
+                padding-left: 40%;
+                padding-top: 18%;
+                grid-row-gap: 40px;
+            }
             
             .button {
                 border: none;
                 padding: 25px 25px;
-                display: inline-block;
-                position: relative;
             }
 
             .button1 {
                 background-color:#72440b;
                 border: 1px solid #ffffff; 
                 border-radius: 100%;
-                top: 231px;
-                left: 309px;
-                /*transform: translate(-50%,-50%);*/
             }
 
             .button2 {
                 background-color:#72440b;
                 border: 1px solid #ffffff; 
                 border-radius: 100%;
-                top: 230px;
-                left: 545px;
             }
 
             .button3 {
                 background-color:#72440b; 
                 border: 1px solid #ffffff;
                 border-radius: 100%;
-                top: 230px;
-                left: 580px;
             }
             
             .button4 {
                 background-color:#72440b; 
                 border: 1px solid #ffffff;
                 border-radius: 100%;
-                top: 245px;
-                left: 510px;
             }
             
             .button5 {
                 background-color:#72440b;
                 border: 1px solid #ffffff; 
                 border-radius: 100%;
-                top: 245px;
-                left: 545px;
             }
 
             .button6 {
                 background-color:#72440b; 
                 border: 1px solid #ffffff;
                 border-radius: 100%;
-                top: 245px;
-                left: 580px;
             }
             
             .button7 {
                 background-color: #72440b; 
                 border: 1px solid #ffffff;
                 border-radius: 100%;
-                top: 252px;
-                left: 510px;
             }
 
             .button8 {
                 background-color:#72440b;
                 border: 1px solid #ffffff;
                 border-radius: 100%;
-                top: 252px;
-                left: 545px;
             }
             
             .button9 {
                 background-color:#72440b; 
                 border: 1px solid #ffffff;
                 border-radius: 100%;
-                top: 252px;
-                left: 580px;
             }
 
         </style>
@@ -101,7 +88,7 @@
                 <img src="./images/chessboard.png" width=50%/>
             </div>-->
 
-            <div class="buttons">
+            <!--<div class="buttons">
                 <button class="button button1" onclick="correct()"></button>
                 <button class="button button2" onclick="wrong()"></button>
                 <button class="button button3" onclick="wrong()"></button>
@@ -117,7 +104,28 @@
                 <button class="button button7" onclick="correct()"></button>
                 <button class="button button8" onclick="wrong()"></button>
                 <button class="button button9" onclick="wrong()"></button>
-            </div>
+            </div>-->
+
+            <div class="grid-container">
+                <!--<div class="grid-item">1</div>
+                <div class="grid-item">2</div>
+                <div class="grid-item">3</div>
+                <div class="grid-item">4</div>
+                <div class="grid-item">5</div>
+                <div class="grid-item">6</div>
+                <div class="grid-item">7</div>
+                <div class="grid-item">8</div>
+                <div class="grid-item">9</div>-->
+                <div class="grid-item"><button class="button button1" onclick="correct()"></button></div>
+                <div class="grid-item"><button class="button button2" onclick="wrong()"></button></div>
+                <div class="grid-item"><button class="button button3" onclick="wrong()"></button></div>
+                <div class="grid-item"><button class="button button4" onclick="wrong()"></button></div>
+                <div class="grid-item"><button class="button button5" onclick="correct()"></button></div>
+                <div class="grid-item"><button class="button button6" onclick="correct()"></button></div>
+                <div class="grid-item"><button class="button button7" onclick="correct()"></button></div>
+                <div class="grid-item"><button class="button button8" onclick="wrong()"></button></div>
+                <div class="grid-item"><button class="button button9" onclick="wrong()"></button></div>
+              </div>
 
             <script>
                 var counter = 0;
