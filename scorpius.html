@@ -118,6 +118,8 @@
 
             <script>
                 let counter;
+                let str = "3264";
+                let answer = str.fontcolor("yellow");
 
                 function first() {
                     counter = 1;
@@ -141,7 +143,6 @@
                 function fourth() {
                     if (counter == 3) {
                         counter = 4;
-                        //window.location.href="googlemaps.html" //links to next puzzle
                     } else {
                         counter = 0;
                     }
@@ -173,7 +174,7 @@
 
                 function eighth() {
                     if (counter == 7) {
-                        document.write("<h1>3264</h1>");
+                        document.write("<h1>" + answer.fontsize(15) + "</h1>");
                     } else {
                         counter = 0;
                     }
