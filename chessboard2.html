@@ -24,6 +24,10 @@
                 cursor: pointer;
             }
 
+            .button:active {
+                transform: translateY(3px);
+            }
+
             .button1 {
                 background-color:#72440b;
                 border: 1px solid #ffffff; 
@@ -84,29 +88,6 @@
         <link rel="stylesheet" href="./css/general.css">
         
         <body>
-
-            <!--<div class="overlay">
-                <img src="./images/chessboard.png" width=50%/>
-            </div>-->
-
-            <!--<div class="buttons">
-                <button class="button button1" onclick="correct()"></button>
-                <button class="button button2" onclick="wrong()"></button>
-                <button class="button button3" onclick="wrong()"></button>
-            </div>
-            <h4></h4>
-            <div class="buttons ">
-                <button class="button button4" onclick="wrong()"></button>
-                <button class="button button5" onclick="correct()"></button>
-                <button class="button button6" onclick="correct()"></button>
-            </div>
-            <h4></h4>
-            <div class="buttons">
-                <button class="button button7" onclick="correct()"></button>
-                <button class="button button8" onclick="wrong()"></button>
-                <button class="button button9" onclick="wrong()"></button>
-            </div>-->
-
             <div class="grid-container">
                 <!--<div class="grid-item">1</div>
                 <div class="grid-item">2</div>
@@ -129,7 +110,10 @@
               </div>
 
             <script>
-                var counter = 0;
+                let counter = 0;
+                let str = "I open when the BELLS toll";
+                let answer = str.fontcolor("yellow");
+
                 function wrong() {
                     counter=0;
                 }
@@ -137,7 +121,7 @@
                 function correct() {
                     counter += 1;
                     if (counter == 4) {
-                        document.write("<h1>I open when the BELLS toll</h1>");
+                        document.write("<h1>" + answer.fontsize(15) + "</h1>");
                     }
                 }
             </script>
