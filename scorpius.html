@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            body {
+                background-image: url('./images/night.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+                position: relative;
+                background-position:top;
+            }
+            
+            .button {
+                border: none;
+                padding: 15px 15px;
+                display: inline-block;
+                position: relative;
+                cursor: pointer;
+            }
+
+            .button:active {
+                /*box-shadow: 0 5px #666;*/
+                transform: translateY(3px);
+                /*transform: translate(5px  10px);*/
+            }
+
+            .button1 {
+                background-color:#99badd;
+                border: 1px solid #80A1C4; 
+                border-radius: 100%;
+                top: 70px;
+                left: 812px;
+                /*transform: translate(-50%,-50%);*/
+            }
+
+            .button2 {
+                background-color:#99badd;
+                border: 1px solid #80A1C4; 
+                border-radius: 100%;
+                top: 335px;
+                left: 423px;
+            }
+
+            .button3 {
+                background-color:#99badd; 
+                border: 1px solid #80A1C4;
+                border-radius: 100%;
+                top: 153px;
+                left: 612px;
+            }
+            
+            .button4 {
+                background-color:#99badd; 
+                border: 1px solid #80A1C4;
+                border-radius: 100%;
+                top: 297px;
+                left: 625px;
+            }
+            
+            .button5 {
+                background-color:#99badd;
+                border: 1px solid #80A1C4; 
+                border-radius: 100%;
+                top: 373px;
+                left: 412px;
+            }
+
+            .button6 {
+                background-color:#99badd; 
+                border: 1px solid #80A1C4;
+                border-radius: 100%;
+                top: -40px;
+                left: 680px;
+            }
+            
+            .button7 {
+                background-color: #99badd; 
+                border: 1px solid #80A1C4;
+                border-radius: 100%;
+                top: 270px;
+                left: 415px;
+            }
+
+            .button8 {
+                background-color:#99badd;
+                border: 1px solid #80A1C4;
+                border-radius: 100%;
+                top: 13px;
+                left: 765px;
+            }
+        </style>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/general.css">
+        <title>Scorpius</title>
+        
+        <body>
+
+            <div class="buttons">
+                <button class="button button1" onclick="first()"></button>
+                <button class="button button2" onclick="second()"></button>
+                <button class="button button3" onclick="third()"></button>
+            </div>
+            <h4></h4>
+            <div class="buttons ">
+                <button class="button button4" onclick="fourth()"></button>
+                <button class="button button5" onclick="fifth()"></button>
+                <button class="button button6" onclick="sixth()"></button>
+            </div>
+            <h4></h4>
+            <div class="buttons">
+                <button class="button button7" onclick="seventh()"></button>
+                <button class="button button8" onclick="eighth()"></button>
+            </div>
+
+            <script>
+                let counter;
+
+                function first() {
+                    counter = 1;
+                }
+                
+                function second() {
+                    if (counter == 1) {
+                        counter = 2;
+                    } else {
+                        counter = 0;
+                    }
+                }
+                function third() {
+                    if (counter == 2) {
+                        counter = 3;
+                    } else {
+                        counter = 0;
+                    }
+                }
+
+                function fourth() {
+                    if (counter == 3) {
+                        counter = 4;
+                        //window.location.href="googlemaps.html" //links to next puzzle
+                    } else {
+                        counter = 0;
+                    }
+                }
+
+                function fifth() {
+                    if (counter == 4) {
+                        counter = 5;
+                    } else {
+                        counter = 0;
+                    }
+                }
+
+                function sixth() {
+                    if (counter == 5) {
+                        counter = 6;
+                    } else {
+                        counter = 0;
+                    }
+                }
+
+                function seventh() {
+                    if (counter == 6) {
+                        counter = 7;
+                    } else {
+                        counter = 0;
+                    }
+                }
+
+                function eighth() {
+                    if (counter == 7) {
+                        document.write("<p>You did it!</p>");
+                    } else {
+                        counter = 0;
+                    }
+                }
+            </script>
+        </body>
+    </head>
+</html>
