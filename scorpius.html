@@ -85,18 +85,46 @@
                 top: 13px;
                 left: 365px;
             }
+
+            .line{
+                background-color: white;
+                position: absolute;
+                height: 4px
+            }
         </style>
+        <script>
+            function createLine(x1, y1, x2, y2, lineId) {
+                dist = Math.sqrt( (x1-x2)*(x1-x2) + ((y1-y2)*(y1-y2)));
+                xmid = (x1+x2)/2;
+                ymid = (y1+y2)/2;
+                slopeRad = Math.atan2(y1-y2, x1-x2);
+                slopeDeg = (slopeRad*180)/Math.PI;
+                
+                line = document.getElementById(lineId);
+                line.style.width = dist + "px";
+                line.style.top = ymid + "px";
+                line.style.left = xmid - (dist/2) + "px";
+                line.style.transform = "rotate("+slopeDeg+"deg)";
+            };
+        </script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./css/general.css">
         <title>Scorpius</title>
         
         <body>
+            <div class="line" id="l1"></div>
+            <div class="line" id="l2"></div>
+            <div class="line" id="l3"></div>
+            <div class="line" id="l4"></div>
+            <div class="line" id="l5"></div>
+            <div class="line" id="l6"></div>
+            <div class="line" id="l7"></div>
 
             <div class="buttons">
                 <button class="button button1" onclick="first()"></button>
                 <button class="button button2" onclick="second()"></button>
-                <button class="button button3" onclick="third()"></button>
+                <button class="button button3" onclick="third()"></button> d
             </div>
             <h4></h4>
             <div class="buttons ">
@@ -111,6 +139,14 @@
             </div>
 
             <script>
+                createLine(430, 80, 300, 170, "l1");
+                createLine(430, 80, 380, 30, "l2");
+                createLine(430, 80, 420, 120, "l3");
+                createLine(302, 153, 240, 350, "l4");
+                createLine(240, 370, 70, 440, "l5");
+                createLine(70, 440, 40, 400, "l6");
+                createLine(30, 400, 70, 350, "l7");
+
                 let counter;
                 let str = "3264";
                 let answer = str.fontcolor("yellow");
